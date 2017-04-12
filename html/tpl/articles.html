@@ -1,0 +1,57 @@
+<div class="container inner">
+    <div class="content">
+
+        <swiper initial-slide="{{initialSlide}}" on-slide-change-end="onTransition" touch-events-target=null touch-move-stop-propagation="{{bool}}" on-init="onInit" prevent-сlicks="{{bool}}" prevent-сlicks-propagation="{{bool}}" simulate-touch="{{bool}}">
+            <slides>
+                <slide ng-repeat="resultData in articles">
+                    <div class="result" rel="{{resultData.title}}_стили">
+                        <div class="block2 flex-container align-top">
+
+                            <div class="small-p50"></div>
+                            <div class="small-p50">
+                                <h2 class="ttu">
+                                    {{resultData.title}}
+                                </h2>
+                            </div>
+
+                        </div>
+                        <div class="block2 flex-container align-top">
+
+                            <div class="small-p50">
+                                <img ng-src="{{resultData.img}}" />
+                            </div>
+                            <div class="small-p50">
+                                <div ng-bind-html="resultData.article"></div>
+                                <ol class="article__list">
+                                    <li ng-repeat="li in resultData.l">
+                                       {{li.i}}
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+
+                        <div class="block2 flex-container align-top">
+
+                            <div class="small-p50 ar">
+
+                            </div>
+                            <div class="small-p50">
+                                <a ng-href="http://r.mail.ru/n250885458"
+                                analytics-on="click"
+                                analytics-event="получить комнату мечты"
+                                analytics-category="Результат"
+                                href="http://r.mail.ru/n250885458" target="_blank" class="btn ttu">Получить комнату мечты</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </slide>
+            </slides>
+                <prev></prev>
+                <next></next>
+                <pagination></pagination>
+        </swiper>
+
+    </div>
+</div>

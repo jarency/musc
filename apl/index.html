@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title ng-bind="$state.current.data.pageTitle">Ваш уют</title>
+
+
+
+        <link rel="stylesheet" href="/css/build.min.css?3.3">
+
+
+
+        <script>
+
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-90020653-3');
+              ga('require', 'displayfeatures');
+
+              try {
+                var args = JSON.parse(location.search.match(/custom_args=(.+)($|&)/)[1]);
+                [ 'campaignName'
+                , 'campaignSource'
+                , 'campaignMedium'
+                , 'campaignContent'
+                ].forEach(function (argName) {
+                  ga('set', argName, args[argName]);
+                })
+              } catch (err) {}
+              ga('set', 'location', location.protocol + '//' + location.host + location.pathname);
+              ga('set', 'referrer', location.protocol + '//' + location.host);
+//              ga('send', 'pageview', '/');
+
+        </script>
+        <script>
+            var $buoop = {c:2,onshow: function(infos){
+            }};
+            function $buo_f(){
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.js";
+            document.body.appendChild(e);
+            };
+            try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+            catch(e){window.attachEvent("onload", $buo_f)}
+        </script>
+
+    </head>
+
+   <body>
+
+    <div id="overlay">
+        <i ng-cloak>
+        {{overlay_innerHTML}}
+        <div class="loader"></div>
+        </i>
+    </div>
+
+
+    <header>
+        <nav>
+            <a ui-sref="test"
+                ng-class="{'active': isTest}"
+                ng-click="Rb.forceRbPixel('Главная_кнопка_уют');"
+                analytics-on="click"
+                analytics-event="кнопка уют"
+                analytics-category="Главная"
+                class="f18 fwlght fg-wht ttu">Какой ваш уют</a>
+            <a ui-sref="articles"
+                ng-class="{'active': isArticles}"
+                ng-click="Rb.forceRbPixel('Главная_кнопка_стили');"
+                analytics-on="click"
+                analytics-event="кнопка стили"
+                analytics-category="Главная"
+                class="f18 fwlght fg-wht ttu">уютные стили</a>
+        </nav>
+
+        <div class="brands block ar header_brands">
+            <a href="http://r.mail.ru/n250885458" target="_blank"><img src="/i/logo-muscle-1.png" class="logo-muscle" /></a>
+            <a href="http://r.mail.ru/n250885458" target="_blank"><img src="/i/logo-pronto-2.png" class="logo-pronto" /></a>
+            <a href="http://r.mail.ru/n250885458" target="_blank"><img src="/i/logo-utya-3.png" class="logo-utya" /></a>
+        </div>
+    </header>
+
+        <main class="view view-animate" ui-view>
+
+        </main>
+
+
+
+<script src="//api.odnoklassniki.ru/js/fapi5.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>дорогие материалы, но сдержанные формы, много полированных поверхностей
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
+
+
+<script src="/js/vendor.min.js?1.3"></script>
+<script src="/js/build.min.js?1.8"></script>
+
+
+
+
+<script>
+    var __app_url = 'https://ok.ru/app/1250171392';
+
+    /**
+     * Returns a random integer between min (inclusive) and max (inclusive)
+     * Using Math.round() will give you a non-uniform distribution!
+     */
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+
+    // см. result.js
+    function API_callback(method, result, data) {
+        console.log("Method "+method+" finished with result "+result+", "+data);
+
+        var $inj = angular.element(document.body).injector();
+        var $rootScope = $inj.get("$rootScope");
+        $rootScope.$broadcast("API_callback", {method:method, result:result, data:data});
+        $rootScope.$digest();
+    }
+
+
+    angular.element(document).ready(function(){
+
+        angular.bootstrap(document, ['rootApp']);
+
+    });
+
+
+
+//    r(function(){
+//        alert('ready')
+//        angular.bootstrap(document, ['rootApp']);
+//    });
+//    function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+
+
+</script>
+
+
+
+
+</body>
+</html>

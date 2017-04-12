@@ -1,0 +1,160 @@
+html, body{
+    height: auto !important;
+}
+
+body{
+
+    min-width: 320px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+}
+
+img{
+    vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+
+img[src$=".svg"]{
+    visibility: hidden;
+}
+
+a {
+    cursor: default;
+    text-decoration: none;
+}
+
+a[ng-click],
+a[data-toggle],
+a[href]{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.block{
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.block2{
+    max-width: 955px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header nav a{
+    display: block;
+    float: left;
+    background-color: #e94b0a;
+    width: 344px;
+    height: 60px;
+    text-align: center;
+    padding-top: 18px;
+}
+.btn:hover,
+header nav a:hover,
+header nav a.active{
+    background-color: #be400b;
+}
+
+
+header nav a.hrt{
+    width: 60px;
+    padding-top: 0;
+}
+header nav a.hrt:before{
+    content: "";
+    display: block;
+    margin: 17px;
+    width: 27px;
+    height: 25px;
+    background: url(../i/hrt.png) 50% 50% no-repeat;
+    background-size: 27px 25px;
+}
+.brands img{
+    transition: transform .25s ease;
+}
+.brands img:hover{
+    transform: scale(1.05);
+}
+header .brands img{
+    margin: 20px 15px;
+}
+
+header .brands .logo-muscle{
+    width: 74px;
+    height: 62px;
+}
+header .brands .logo-pronto{
+    width: 52px;
+    height: 63px;
+}
+header .brands .logo-utya{
+    width: 101px;
+    height: 77px;
+}
+
+
+
+main{
+    height: 100vh;
+    width: 100%;
+    min-height: 736px;
+    max-height: 736px;
+
+}
+
+main .container.main{
+    background-color: #cbab8b;
+    background-image: url(../i/_main-back.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+/*    background-size: cover;*/
+    width: 100%;
+    height: 100%;
+}
+
+main .container.inner{
+    background-color: #fff;
+    background-image: url(../i/_lev2-back.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+/*    background-size: cover;*/
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+

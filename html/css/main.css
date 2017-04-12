@@ -1,0 +1,67 @@
+
+.main .content .cosiness {
+    width: 273px;
+    height: 196px;
+    position: relative;
+    z-index: 5;
+    margin-bottom: -15px;
+}
+.main .content h1{
+    position: absolute;
+    top: 15px;
+    left: 215px;
+    font-size: 22px;
+}
+.main .content h1 sup{
+    position: relative;
+    top: -.125em;
+}
+.main .content{
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    margin-left: 140px;
+/*    width: 408px;*/
+    text-align: center;
+}
+
+
+.main .brands .logo-muscle{
+    width: 90px;
+    height: 75px;
+}
+.main .brands .logo-pronto{
+    width: 64px;
+    height: 76px;
+}
+.main .brands .logo-utya{
+    width: 122px;
+    height: 94px;
+}
+
+
+
+.ribbon:hover{
+    transform: scale(1.025);
+}
+.ribbon{
+    transition: transform .25s ease;
+    width: 408px;
+    height: 74px;
+    display: block;
+
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+    background: url(../i/ribbon.png) no-repeat 50% 50%;
+    background-size: 100% 100%;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 23px;
+}
+.main .content .brands{
+    margin-top: 45px;
+}
+.main .content .brands img{
+    margin: 20px 12px;
+}

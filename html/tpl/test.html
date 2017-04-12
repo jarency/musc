@@ -1,0 +1,96 @@
+<div class="container inner">
+            <div class="content ac">
+
+
+
+
+                <div class="block questions flex-container qanima anima-{{count}}">
+
+                    <div class="small-p20 question" ng-repeat="answer in questions[count].answers">
+                        <input type="radio" id="radio-{{$index}}" name="selectedAnswer" ng-model="user.selectedAnswer" ng-value="{{answer.key}}" ng-change="next(user.selectedAnswer)">
+                        <label for="radio-{{$index}}" class="radio-custom-label">
+                            <div>
+                                <img ng-src="/i/{{count+1}}-{{$index+1}}.jpg" />
+                            </div>
+                            <span>{{answer.title}}</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="count f23 fg-orng">
+                    {{count+1}}
+                </div>
+
+                <h1 class="ttu question_title ac qanima anima-{{count}}" ng-cloak>
+                   {{questions[count].title}}&nbsp;
+                </h1>
+
+<!--
+                <a href="" class="btn ttu next_question">
+                    следующий вопрос
+                </a>
+-->
+
+
+
+            </div>
+
+
+        </div>
+
+
+<!--
+
+            <div class="inner-content" ng-hide="testEnded">
+
+                <div class="count" ng-cloak>
+                    {{count+1 | leadingZeroTen}} <small>{{total}}</small>
+                </div>
+
+                <h1 class="qanima anima-{{count}}" ng-cloak>{{questions[count].title}}&nbsp;</h1>
+
+                <div class="answers-container qanima anima-{{count}}">
+                    <div ng-repeat="answer in questions[count].answers" class="answer-item">
+                        <input type="radio" id="radio-{{$index}}" name="selectedAnswer" ng-model="user.selectedAnswer" ng-value="{{answer.key}}" ng-change="next(user.selectedAnswer)">
+                        <label for="radio-{{$index}}" class="radio-custom-label">
+                            <span class="answer-text">{{answer.title}}</span>
+                        </label>
+                    </div>
+                </div>
+
+
+            <div class="button-line">
+                <a ng-if="count < (total-1)" class="next-question-button" ng-click="next(user.selectedAnswer)">Ответить</a>
+                <a ng-if="count == (total-1)" class="next-question-button" ng-click="checkScore(user.selectedAnswer)">Ответить</a>
+            </div>
+
+
+            </div>
+
+
+
+
+            <div class="final-content">
+
+                <div class="top-block" ng-hide="!testEnded">
+                    <h1>Вы &mdash; {{resultData.title}}</h1>
+                    <p>{{resultData.text1}}</p>
+                </div>
+                <h2 class="bottom-block" ng-hide="!testEnded">{{resultData.text2}}</h2>
+                <div class="soc-block" ng-hide="!testEnded">
+                    <a ng-click="showSoci()" ng-hide="!hideSoci" class="goshare"><span>Поделиться результатом</span></a>
+                    <div class="soc-i" ng-hide="hideSoci">
+                        <a ng-repeat="service in share.buttons() track by $index" ng-click="share[service](___SHARE___URL___+'/'+resultData.key)" class="{{service}}"><img ng-src="i/soc/{{service}}.svg" /></a>
+                    </div>
+                </div>
+
+
+                        <button type="button" class="take-test" ng-click="onceMore()">ПРОЙТИ ТЕСТ ЕЩЕ РАЗ</button>
+            </div>
+-->
+
+
+
+
+

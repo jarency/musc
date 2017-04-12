@@ -1,0 +1,990 @@
+
+
+/* ???????????????????????????????  */
+/* hiding  */
+
+.fadeOut{
+    opacity: 0;
+    transition: opacity .25s  ease-in;
+}
+.actions.ng-hide-add {
+    animation: 0.5s _FadeOut ease-in;
+}
+
+
+/*  showing  */
+
+.fadeIn{
+    opacity: 1;
+    transition: opacity .25s  ease-in;
+}
+.actions.ng-hide-remove {
+    animation: 0.85s _FadeIn cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes _FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes _FadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ABOUT проявление
+*/
+
+.downIn{
+    animation: 0.85s _DownIn cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes _DownIn {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes _DownOut {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+улетает тест перед резалтом
+*/
+
+.inner-content {
+    transition: all .5s ease-out;
+}
+
+.inner-content.ng-hide {
+    transform: translate3d(20%, 0, 0);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.qanimaNe {
+  transition: all .45s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+/*  opacity: 1;*/
+  transform: translate3d(0, 0, 0);
+}
+
+.qanimaNe[class*="-remove"] {
+  transition: none;
+/*  opacity: 0;*/
+  transform: translate3d(0, 100%, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+вопросы теста
+*/
+
+
+
+/*
+https://makandracards.com/makandra/35829-angular-quick-and-easy-animation-on-changed-binding-value
+*/
+.qanima {
+  transition: all .45s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0;
+}
+
+.qanima[class*="-remove"] {
+  transition: none;
+  opacity: 0;
+/*  transform: translate3d(0, -20%, 0);*/
+}
+
+.question {
+  transition: all .25s ease-out;
+}
+
+.question:nth-child(2){
+    transition-delay: .1s
+}
+.question:nth-child(3){
+    transition-delay: .15s
+}
+.question:nth-child(4){
+    transition-delay: .2s
+}
+.question:nth-child(5){
+    transition-delay: .25s
+}
+
+.question.ng-move,
+.question.ng-enter,
+.question.ng-leave {
+/*  transform: translate3d(0, -5%, 0);*/
+    margin-top: -20px;
+}
+
+.question.ng-leave.ng-leave-active,
+.question.ng-move,
+.question.ng-enter {
+  opacity:0;
+}
+
+.question.ng-leave,
+.question.ng-move.ng-move-active,
+.question.ng-enter.ng-enter-active {
+  opacity:1;
+  transform: translate3d(0, 0, 0);
+    margin-top: 0px;
+}
+
+
+.question.ng-leave{
+    display: none;
+}
+
+
+
+/*
+.view{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+
+
+    z-index: 9999;
+}
+*/
+
+#menu.view-animate.ng-enter,
+#menu.view-animate.ng-leave {
+    transition: all .4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#menu.view-animate.ng-enter {
+    opacity: 0 !important;
+/*    transform: translate3d(100%, 0, 0);*/
+}
+
+#menu.view-animate.ng-enter.ng-enter-active {
+    opacity: 1 !important;
+/*    transform: translate3d(0, 0, 0);*/
+}
+
+#menu.view-animate.ng-leave.ng-leave-active {
+    opacity: 0 !important;
+/*    transform: translate3d(-100%, 0, 0);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ТЕСТ + основа ABOUT
+*/
+
+.view.view-animate.ng-enter,
+.view.view-animate.ng-leave {
+    transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.view.view-animate.ng-enter {
+    opacity: 0 !important;
+/*    transform: translate3d(100%, 0, 0);*/
+}
+
+.view.view-animate.ng-enter.ng-enter-active {
+    opacity: 1 !important;
+/*    transform: translate3d(0, 0, 0);*/
+}
+
+.view.view-animate.ng-leave.ng-leave-active {
+    opacity: 0 !important;
+/*    transform: translate3d(-100%, 0, 0);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ПОЯВЛЕНИЕ РЕЗУЛЬТАТА
+*/
+
+
+#visualsScroll{
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+}
+#visualsScroll.ng-hide{
+    transform: translate3d(0, -50%, 0);
+}
+
+
+
+.goshare{
+    margin-bottom: -100%;
+}
+.soc-block {
+    position: relative;
+}
+.goshare,
+.soc-block .soc-i{
+    position: absolute;
+    top: 0;
+}
+
+header .soc-i.ng-hide-add{
+    animation:.5s soc-i_hideHdr;
+}
+header .soc-i.ng-hide-remove{
+    animation:.5s soc-i_showHdr;
+}
+
+
+
+
+
+@keyframes soc-i_showHdr {
+  0% {
+      opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  100% {
+      opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+@keyframes soc-i_hideHdr {
+  0% {
+      opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+      opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+}
+
+
+
+.soc-block .goshare.ng-hide-add{
+  animation:.5s goshare_hide;
+}
+.soc-block .soc-i.ng-hide-remove {
+  animation:.5s soc-i_show;
+}
+
+@keyframes soc-i_show {
+  0% {
+      opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+      opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes goshare_hide {
+  0% {
+      opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+      opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+
+
+
+
+
+#visualsScroll >  div{
+    transform: translate3d(0, 150%, 0);
+    transition: transform .35s  cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+#visualsScroll.appear > div {
+    transform: translate3d(0, 0, 0);
+}
+
+
+/*#pic,*/
+#pic_img,
+#img{
+    position: absolute;
+    top: 0;
+    left: 0;
+/*
+    transform: translate3d(0, 0, 0);
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+*/
+}
+/**/
+
+/*#pic.ng-hide,*/
+/*
+*/
+
+#pic_img{
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+}
+#pic_img.ng-hide{
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+    transform: translate3d(0, 150%, 0);
+}
+
+
+#pic.ng-hide-add {
+  animation:1s pic_hide;
+}
+
+@keyframes pic_hide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+
+#pic.ng-hide-remove {
+  animation:.5s pic_show;
+}
+
+@keyframes pic_show {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+#img.ng-hide-add {
+  animation:.5s img_hide;
+}
+
+@keyframes img_hide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+#img.ng-hide-remove {
+  animation:.5s img_show;
+}
+
+@keyframes img_show {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+ARTICLES NAV
+
+*/
+
+
+.article-nav-item {
+  transition: all .25s ease-out;
+}
+
+.article-nav-item:nth-child(1){
+    transition-delay: 0.5s
+}
+.article-nav-item:nth-child(2){
+    transition-delay: 0.55s
+}
+.article-nav-item:nth-child(3){
+    transition-delay: 0.6s
+}
+.article-nav-item:nth-child(4){
+    transition-delay: 0.65s
+}
+.article-nav-item:nth-child(5){
+    transition-delay: 0.7s
+}
+
+.article-nav-item.ng-move,
+.article-nav-item.ng-enter,
+.article-nav-item.ng-leave {
+}
+
+.article-nav-item.ng-leave.ng-leave-active,
+.article-nav-item.ng-move,
+.article-nav-item.ng-enter {
+  opacity:0;
+}
+
+.article-nav-item.ng-leave,
+.article-nav-item.ng-move.ng-move-active,
+.article-nav-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+.article-nav-item.ng-leave{
+    display: none;
+}
+
+
+/*
+ARTICLES ABZAC
+*/
+
+
+.abzac {
+  transition: all .35s ease-out;
+}
+
+.abzac:nth-child(1){
+    transition-delay: .15s
+}
+.abzac:nth-child(2){
+    transition-delay: .25s
+}
+.abzac:nth-child(3){
+    transition-delay: .35s
+}
+.abzac:nth-child(4){
+    transition-delay: .45s
+}
+.abzac:nth-child(5){
+    transition-delay: .55s
+}
+.abzac:nth-child(6){
+    transition-delay: .65s
+}
+
+.abzac.ng-move,
+.abzac.ng-enter,
+.abzac.ng-leave {
+}
+
+.abzac.ng-leave.ng-leave-active,
+.abzac.ng-move,
+.abzac.ng-enter {
+  opacity:0;
+}
+
+.abzac.ng-leave,
+.abzac.ng-move.ng-move-active,
+.abzac.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+.abzac.ng-leave{
+    display: none;
+}
+
+
+/*
+ARTICLES IMAGES
+*/
+
+
+
+
+.articleImagesWrapper{
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+}
+.articleImagesWrapper.ng-hide{
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+    transform: translate3d(0, 150%, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ТЕСТ прилетел резалт
+https://thinkster.io/angular-animations-tutorial
+*/
+
+.final-content .bottom-block{
+    transition: all .5s  cubic-bezier(0.250, 0.460, 0.450, 0.940) .15s;
+    opacity:1;
+    transform: translate3d(0, 0, 0);
+}
+
+.final-content .soc-block{
+    transition: all .5s ease-out .5s;
+    opacity:1;
+    transform: translate3d(0, 0, 0);
+}
+.final-content .bottom-block.ng-hide{
+    opacity:0;
+    transform: translate3d(-50%, 0, 0);
+}
+.final-content .soc-block.ng-hide{
+    opacity:0;
+}
+
+
+
+
+
+
+.final-content {
+    position: absolute;
+    width: 100%;
+    padding-right: 60px;
+    top: 155px;
+
+
+/*
+    opacity:1;
+    transform: translate3d(0, 0, 0);
+    transition: all .35s ease-out;
+*/
+}
+
+@media screen and (max-height: 600px) {
+    .final-content{
+        top: 100px;
+    }
+}
+
+.final-content .top-block.ng-hide-add {
+  animation:0.5s hide;
+}
+
+@keyframes hide {
+  0% {
+    opacity:1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity:0;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+
+
+.final-content .top-block.ng-hide-remove {
+  animation:0.5s show;
+
+/*
+    opacity:0;
+    transform: translate3d(0, 50%, 0);
+*/
+}
+
+@keyframes show {
+  0% {
+    opacity:0;
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    opacity:1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+G A R B A G E
+*/
+
+
+.vidos .next,
+.vidos .prev{
+    opacity: 0;
+    transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940) .75s;
+}
+
+
+.vidos.in .next,
+.vidos.in .prev{
+    opacity: 1;
+}
+
+
+.vidos.in.ed .prev {
+  transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.vidos.in.ed .prev[class*="-remove"] {
+  transition: none;
+  opacity: 0;
+  transform: translate3d(40%, 0, 0);
+}
+
+
+.vidos.in.ed .next {
+  transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.vidos.in.ed .next[class*="-remove"] {
+  transition: none;
+  opacity: 0;
+  transform: translate3d(-40%, 0, 0);
+}
+
+
+
+
+/*
+
+.vidos.in.ed .video__container {
+  transition: all .75s cubic-bezier(0.250, 0.460, 0.450, 0.940) .25s;
+  opacity: 1;
+}
+
+.vidos.in.ed .video__container[class*="-remove"] {
+  transition: none;
+  opacity: 0;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+.result .supradin,
+.result .bayer{
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    transition: all .35s ease-out;
+}
+
+
+.result.in .supradin,
+.result.in .bayer{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+.video__figure.item__1,
+.video__figure.item__2,
+.video__figure.item__3{
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    transition: all .35s ease-out;
+}
+
+.video__btn.item__1,
+.video__btn.item__2,
+.video__btn.item__3{
+    opacity: 0;
+    transform: translate3d(-100%,0,  0);
+    transition: all .35s ease-out;
+}
+
+
+
+.in .video__figure.item__1,
+.in .video__figure.item__2,
+.in .video__figure.item__3,
+.in .video__btn.item__1,
+.in .video__btn.item__2,
+.in .video__btn.item__3{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+.in .video__figure.item__1{
+    transition-delay: .1s
+}
+.in .video__figure.item__2{
+    transition-delay: .15s
+}
+.in .video__figure.item__3{
+    transition-delay: .3s
+}
+
+.in .video__btn.item__1{
+    transition-delay: .35s
+}
+.in .video__btn.item__2{
+    transition-delay: .45s
+}
+.in .video__btn.item__3{
+    transition-delay: .55s
+}
+
+
+
+
+.grey_female + .copy_wrapper{
+	opacity: 0;
+    transition: opacity .35s ease-out;
+}
+.grey_female.fadeOut + .copy_wrapper{
+	opacity: 1;
+}
+
+
+
+
+.video__container{
+    opacity: 0;
+    transform: scale(.25) translate3d(0, 0, 0);
+    transition: all .35s ease-out;
+}
+
+
+.in .video__container{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.question_view{
+    position: absolute;
+}
+.question_view.view-animate.ng-enter,
+.question_view.view-animate.ng-leave {
+/*    transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);*/
+    transition: all .35s ease-out;
+}
+
+
+.view-animate.ng-enter .vars a,
+.view-animate.ng-leave .vars a {
+/*    transition: all .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);*/
+    transition: all .35s ease-out;
+}
+
+.view-animate.ng-enter .vars a {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.view-animate.ng-enter.ng-enter-active .vars a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.view-animate.ng-leave.ng-leave-active .vars a {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+
+
+.view-animate.ng-enter .vars a:nth-child(1),
+.view-animate.ng-leave .vars a:nth-child(1){
+    transition-delay: .1s
+}
+
+.view-animate.ng-enter .vars a:nth-child(2),
+.view-animate.ng-leave .vars a:nth-child(2){
+    transition-delay: .3s
+}
+
+.view-animate.ng-enter .vars a:nth-child(3),
+.view-animate.ng-leave .vars a:nth-child(3){
+    transition-delay: .5s
+}
+
+
